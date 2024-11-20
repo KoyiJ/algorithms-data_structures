@@ -7,8 +7,14 @@ public class Array {
 
     public int[] data;
 
+    /**
+     * 数组初始容量
+     */
     private int size = 10;
 
+    /**
+     * 数组中元素个数计数
+     */
     private int count = 0;
 
     public Array() {
