@@ -79,6 +79,7 @@ public class LinkedList1 {
 
     /**
      * 在给定结果之后插入
+     *
      * @param p
      * @param value
      */
@@ -105,10 +106,34 @@ public class LinkedList1 {
 
     /**
      * 删除给定节点
+     *
+     * @param head
      * @param p
      * @return
      */
-    public Node deleteThisNode(Node p) {
+    public Node deleteThisNode(Node head, Node p) {
 
+        if (p == null || head == null) {
+            return head;
+        }
+
+        Node prev = null;
+        Node q = head;
+        while (q != null) {
+            if (q == p) {
+                break;
+            }
+            prev = q;
+            q = q.next;
+        }
+
+        if (q == null) return null; // 遍历完整个链表都没找到这个节点
+
+        if (prev == null) {  // 指定节点是头结点的情况
+            head = head.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+        return head;
     }
 }
