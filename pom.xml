@@ -16,6 +16,7 @@
         <module>hash-table</module>
         <module>sort</module>
         <module>tree</module>
+        <module>heap</module>
     </modules>
 
     <properties>

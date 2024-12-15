@@ -8,6 +8,10 @@ public class BinaryTree {
     }
     private Node root;
 
+    /**
+     * 前序遍历
+     * @param root
+     */
     public void preOrder(Node root) {
         if (root == null) return;
         System.out.println(root.data);
@@ -15,6 +19,10 @@ public class BinaryTree {
         preOrder(root.right);
     }
 
+    /**
+     * 中序遍历
+     * @param root
+     */
     public void inOrder(Node root) {
         if (root == null) return;
         inOrder(root.left);
@@ -22,6 +30,10 @@ public class BinaryTree {
         inOrder(root.right);
     }
 
+    /**
+     * 后序遍历
+     * @param root
+     */
     public void postOrder(Node root) {
         if (root == null) return;
         postOrder(root.left);
